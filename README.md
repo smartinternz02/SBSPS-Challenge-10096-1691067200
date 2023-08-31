@@ -97,7 +97,7 @@ print("Accuracy (SVM):", accuracy_svm)
 
 
 
-HistGradientBoostingClassifier
+#HistGradientBoostingClassifier
 
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
@@ -109,17 +109,17 @@ data = load_iris()
 X = data.data
 y = data.target
 
- Split data into train and test sets
+# Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-Initialize and train the HistGradientBoostingClassifier
+#Initialize and train the HistGradientBoostingClassifier
 hist_gb_classifier = HistGradientBoostingClassifier()
 hist_gb_classifier.fit(X_train, y_train)
 
- Make predictions
+# Make predictions
 y_pred_hist_gb = hist_gb_classifier.predict(X_test)
 
- Evaluate the classifier
+# Evaluate the classifier
 accuracy_hist_gb = accuracy_score(y_test, y_pred_hist_gb)
 print("Accuracy (HistGradientBoostingClassifier):", accuracy_hist_gb)
 
@@ -129,7 +129,10 @@ The Online Placement Prediction System, where student can estimate their chances
 # features
 By leveraging the Random Forest Classification technique, the model has been train to analyze the input parameteers and makes predictions ragarding the outcome. The Machine Learing Model (HistGradientboostingclassifer) achieved 97% precision and 86% accuracy.
 # Tech flask
-Google Colab Flask framework. HTML,CSS,Python Ibm cloud
+1)Google Colab 
+2)Flask framework.
+3)HTML,CSS,Python 
+4)Ibm cloud
 
 # Home page
 ![WhatsApp Image 2023-08-31 at 13 02 53](https://github.com/jithendrasaibb/pred/assets/143669432/e1f50263-7bcf-4e72-8973-1fefacd5b840)
