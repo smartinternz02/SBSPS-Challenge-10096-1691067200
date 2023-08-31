@@ -39,59 +39,59 @@ data = campus_placement()
 X = data.data
 y = data.target
 
- Split data into train and test sets
+# Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
- Initialize and train the classifier
+# Initialize and train the classifier
 dt_classifier = DecisionTreeClassifier()
 dt_classifier.fit(X_train, y_train)
 
- Make predictions
+# Make predictions
 y_pred = dt_classifier.predict(X_test)
 
- Evaluate the classifier
+# Evaluate the classifier
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
 2. Random Forest Classifier:
  from sklearn.ensemble import RandomForestClassifier
 
- Initialize and train the classifier
+# Initialize and train the classifier
 rf_classifier = RandomForestClassifier()
 rf_classifier.fit(X_train, y_train)
 
- Make predictions
+# Make predictions
 y_pred_rf = rf_classifier.predict(X_test)
 
- Evaluate the classifier
+# Evaluate the classifier
 accuracy_rf = accuracy_score(y_test, y_pred_rf)
 print("Accuracy (Random Forest):", accuracy_rf)
 
  3. Logistic Regression Classifier:
  from sklearn.linear_model import LogisticRegression
 
- Initialize and train the classifier
+# Initialize and train the classifier
 lr_classifier = LogisticRegression()
 lr_classifier.fit(X_train, y_train)
 
- Make predictions
+ # Make predictions
 y_pred_lr = lr_classifier.predict(X_test)
 
- Evaluate the classifier
+# Evaluate the classifier
 accuracy_lr = accuracy_score(y_test, y_pred_lr)
 print("Accuracy (Logistic Regression):", accuracy_lr)
 
 4. Support Vector Machine (SVM) Classifier:
 from sklearn.svm import SVC
 
- Initialize and train the classifier
+# Initialize and train the classifier
 svm_classifier = SVC()
 svm_classifier.fit(X_train, y_train)
 
- Make predictions
+# Make predictions
 y_pred_svm = svm_classifier.predict(X_test)
 
- Evaluate the classifier
+# Evaluate the classifier
 accuracy_svm = accuracy_score(y_test, y_pred_svm)
 print("Accuracy (SVM):", accuracy_svm)
 
